@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function validateMang(mang) {
+            let kiemtra= /^(0|\+84)(\s|\.)?((3[2-9])|(9[6-8]|(8|[6])))(\d)(\s|\.)?(\d{3})(\s|\.)?(\d{3})$/;
+            return kiemtra.test(mang);
+        };
+        function duyetmnag(arr) {
+            for (let i = 0; i < arr.length; i++) {
+            if (validateMang(arr[i])){
+                document.write(arr[i] +": Đây là số của mạng Viettel!"+"<br/>")
+            }else {
+                document.write(arr[i]+": Đây không phải số mạng Viettel!"+"<br/>")
+            }
+                }
+        };
+        let arr1=["0988853299","0891234565","0881234567"];
+        duyetmnag(arr1);
+
+    </script>
+</body>
+</html>
+
+
